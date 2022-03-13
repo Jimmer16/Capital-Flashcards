@@ -1,0 +1,76 @@
+body {
+    background-image: url("world.png");
+    background-size: cover;
+}
+
+.card {
+    border: solid 1px black;
+    border-radius: 15px;
+    color: #910e1a;
+    display: flex;
+    font-size: 20px;
+    font-family: "Mclaren";
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    transition: all 1.2s ease;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.container {
+    align-content: center;
+    background-color: #e5c396;
+    border: solid 1px black;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 500px;
+    height: 500px;
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+
+.front {
+    background-color: #608c9e;
+    z-index: 2;
+}
+
+.back {
+    background-color: aliceblue;
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+#title {
+    border: solid 1px black;
+    border-radius: 50px;
+    background-color: #608c9e;
+    font-family: "Roboto Mono";
+    color: #910e1a;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    padding: 5px 20px;
+    width: fit-content;
+}
